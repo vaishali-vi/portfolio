@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vaishali Vignesh — builds with AI</title>
+<meta name="description" content="Vaishali Vignesh — early-career product professional who builds with AI to create real impact, and loves passing on what she learns." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=Shantell+Sans:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF6EE;
+    --paper-2:#F3ECDF;
+    --ink:#23332F;
+    --ink-soft:#54635E;
+    --teal:#2F6F6A;
+    --teal-deep:#1F4E4A;
+    --coral:#E8765A;
+    --sun:#F0B43C;
+    --line:#DED5C4;
+    --card:#FFFDF8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Inter",system-ui,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--sun);color:var(--ink)}
+  a{color:inherit}
+  .wrap{max-width:920px;margin:0 auto;padding:0 28px}
+
+  /* ---------- hero ---------- */
+  header{position:relative;padding:74px 0 8px}
+  .eyebrow{font-family:"Shantell Sans",cursive;font-size:1.25rem;color:var(--coral);transform:rotate(-2deg);display:inline-block;margin-bottom:10px}
+  h1{
+    font-family:"Fraunces",serif;font-weight:700;
+    font-size:clamp(2.7rem,8vw,4.6rem);line-height:1.02;letter-spacing:-0.5px;
+    color:var(--ink);position:relative;display:inline-block;
+  }
+  .squiggle{display:block;width:min(330px,72%);height:14px;margin-top:4px}
+  .squiggle path{
+    fill:none;stroke:var(--sun);stroke-width:5;stroke-linecap:round;
+    stroke-dasharray:1000;stroke-dashoffset:1000;animation:draw 1.2s .35s ease forwards;
+  }
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .lede{font-size:clamp(1.08rem,2.4vw,1.35rem);max-width:640px;margin:22px 0 26px;color:var(--ink-soft)}
+  .lede b{color:var(--ink);font-weight:600}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+  .chip{font-size:.82rem;background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:5px 13px;color:var(--ink-soft)}
+
+  .cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .btn{
+    font-family:"Inter";font-weight:600;font-size:.95rem;text-decoration:none;
+    padding:11px 20px;border-radius:12px;transition:transform .15s ease, box-shadow .15s ease;
+    display:inline-flex;align-items:center;gap:8px;cursor:pointer;
+  }
+  .btn.primary{background:var(--teal);color:#fff;box-shadow:0 2px 0 var(--teal-deep)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.primary:hover{box-shadow:0 4px 0 var(--teal-deep)}
+
+  /* floating doodles */
+  .doodle{position:absolute;opacity:.9;pointer-events:none}
+  .d1{top:60px;right:2%;animation:float 6s ease-in-out infinite}
+  .d2{top:230px;right:11%;animation:float 7.5s ease-in-out infinite .8s}
+  .d3{bottom:-6px;right:24%;animation:float 8s ease-in-out infinite .4s}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(5deg)}}
+
+  /* ---------- section frame ---------- */
+  section{padding:46px 0}
+  section.tight{padding:30px 0}
+  .kicker{font-family:"Shantell Sans",cursive;color:var(--coral);font-size:1.05rem;margin-bottom:6px}
+  h2{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(1.6rem,4vw,2.2rem);color:var(--ink);margin-bottom:24px;letter-spacing:-.3px}
+
+  /* things I built */
+  .builds{display:flex;flex-direction:column;gap:16px}
+  .build{
+    background:var(--card);border:1px solid var(--line);border-left:5px solid var(--teal);
+    border-radius:16px;padding:20px 22px;transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .build:hover{transform:translateY(-3px);box-shadow:0 10px 26px -16px rgba(31,78,74,.5)}
+  .bhead{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+  .build h3{font-family:"Fraunces",serif;font-weight:600;font-size:1.2rem}
+  .build p{color:var(--ink-soft);font-size:1rem;max-width:700px}
+  .tag{font-family:"Shantell Sans",cursive;font-size:.82rem;font-weight:600;padding:3px 11px;border-radius:999px;white-space:nowrap}
+  .tag.prog{background:#FBE7DF;color:#B1502F}
+  .tag.live{background:#E6F1EC;color:var(--teal-deep)}
+  .tag.taught{background:#FBF0D2;color:#8A6A12}
+  .playlink{display:inline-block;margin-top:9px;font-weight:600;color:var(--teal);text-decoration:none;border-bottom:2px solid transparent;transition:border-color .15s}
+  .playlink:hover{border-color:var(--coral)}
+
+  /* work list */
+  .work{border-top:1px dashed var(--line)}
+  .item{border-bottom:1px dashed var(--line);padding:22px 4px;display:grid;grid-template-columns:1fr auto;gap:6px 20px;align-items:baseline}
+  .item .role{font-family:"Fraunces",serif;font-weight:600;font-size:1.22rem}
+  .item .org{color:var(--teal);font-weight:600}
+  .item .when{font-size:.85rem;color:var(--ink-soft);white-space:nowrap;font-family:"Shantell Sans",cursive}
+  .item .desc{grid-column:1/-1;color:var(--ink-soft);font-size:1rem;max-width:700px}
+  .item .desc .m{color:var(--ink);font-weight:600}
+
+  /* education (boxes) */
+  .edu{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .ecard{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px 20px;
+    display:flex;flex-direction:column;gap:3px;transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .ecard:hover{transform:translateY(-3px);box-shadow:0 10px 26px -16px rgba(31,78,74,.5)}
+  .eemoji{font-size:1.9rem;line-height:1;margin-bottom:8px}
+  .edeg{font-family:"Fraunces",serif;font-weight:600;font-size:1.18rem}
+  .esch{color:var(--ink-soft);font-size:.97rem}
+  .ewhen{font-family:"Shantell Sans",cursive;font-size:.85rem;color:var(--ink-soft);margin-top:2px}
+
+  /* sticky note */
+  .sticky{
+    background:var(--sun);color:#3A2A06;border-radius:6px;padding:26px 28px;margin-top:8px;
+    position:relative;box-shadow:0 14px 30px -18px rgba(0,0,0,.5);transform:rotate(-1.2deg);max-width:600px;
+  }
+  .sticky:before{content:"";position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(3deg);width:96px;height:22px;background:rgba(47,111,106,.35);border-radius:2px}
+  .sticky .lbl{font-family:"Shantell Sans",cursive;font-weight:600;display:block;margin-bottom:4px;font-size:1.1rem}
+  .sticky p{font-size:1.05rem;line-height:1.5}
+
+  /* leave-your-mark */
+  .markintro{color:var(--ink-soft);font-size:1.02rem;max-width:620px;margin:-12px 0 22px}
+  .markbox{display:grid;grid-template-columns:1fr 3fr;gap:18px;align-items:stretch}
+  .controls{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .ctl-label{font-family:"Shantell Sans",cursive;color:var(--coral);font-size:.95rem;margin-top:4px}
+  .shapes{display:flex;flex-wrap:wrap;gap:8px}
+  .shape-btn{
+    width:42px;height:42px;border:1.5px solid var(--line);background:var(--paper);border-radius:12px;
+    display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .12s ease,border-color .12s ease;padding:0;
+  }
+  .shape-btn:hover{transform:translateY(-2px)}
+  .shape-btn.sel{border-color:var(--teal);background:#EAF3F1}
+  .shape-btn svg{width:24px;height:24px;display:block}
+  .swatches{display:flex;flex-wrap:wrap;gap:8px}
+  .swatch{width:26px;height:26px;border-radius:50%;cursor:pointer;border:2px solid transparent;box-shadow:0 0 0 1.5px var(--line);transition:transform .12s ease}
+  .swatch:hover{transform:scale(1.12)}
+  .swatch.sel{border-color:var(--paper);box-shadow:0 0 0 2.5px var(--ink)}
+  .leavebtn{margin-top:12px;justify-content:center;border:none;font-family:"Inter";cursor:pointer}
+  .leavebtn:disabled{background:var(--paper-2);color:var(--ink-soft);box-shadow:none;cursor:default;transform:none}
+  .canvas-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Shantell Sans",cursive;color:var(--ink-soft);opacity:.55;pointer-events:none;font-size:1.1rem}
+  .canvas{
+    position:relative;overflow:hidden;min-height:300px;border-radius:16px;
+    border:1.5px dashed var(--line);
+    background:radial-gradient(circle at 20% 20%, #FFFDF8, var(--paper-2));
+  }
+  .floatshape{position:absolute;will-change:transform;animation:drift linear infinite}
+  .floatshape svg{display:block}
+  @keyframes drift{
+    0%{transform:translate(0,0) rotate(0deg)}
+    25%{transform:translate(22px,-26px) rotate(40deg)}
+    50%{transform:translate(-18px,-12px) rotate(-30deg)}
+    75%{transform:translate(14px,20px) rotate(25deg)}
+    100%{transform:translate(0,0) rotate(0deg)}
+  }
+  .canvas .pop{animation:pop .4s ease, drift linear infinite .4s}
+  @keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.3)}100%{transform:scale(1)}}
+
+  /* footer */
+  footer{padding:44px 0 64px;border-top:1px solid var(--line);margin-top:20px}
+  .flinks{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:14px}
+  .flinks a{font-weight:600;color:var(--teal);text-decoration:none;border-bottom:2px solid transparent;transition:border-color .15s}
+  .flinks a:hover{border-color:var(--coral)}
+  .fnote{font-family:"Shantell Sans",cursive;color:var(--ink-soft)}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:640px){
+    .doodle{display:none}
+    .item{grid-template-columns:1fr}
+    .item .when{font-size:.8rem}
+    .erow{grid-template-columns:1fr}
+    .edu{grid-template-columns:1fr}
+    .markbox{grid-template-columns:1fr}
+    .canvas{min-height:260px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important}
+    .reveal{opacity:1;transform:none;transition:none}
+    .squiggle path{stroke-dashoffset:0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <svg class="doodle d1" width="58" height="58" viewBox="0 0 58 58" fill="none" stroke="#2F6F6A" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+    <path d="M29 6v9M29 43v9M6 29h9M43 29h9M13 13l6 6M45 45l-6-6M45 13l-6 6M13 45l6-6"/>
+    <circle cx="29" cy="29" r="9" stroke="#E8765A"/>
+  </svg>
+  <svg class="doodle d2" width="50" height="50" viewBox="0 0 50 50" fill="none" stroke="#E8765A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M25 4l5 13 14 1-10.5 9 3.5 14L25 47l-12 1L17 36 6 27l14-1z" stroke="#F0B43C"/>
+    <path d="M25 16v9l6 4"/>
+  </svg>
+  <svg class="doodle d3" width="46" height="46" viewBox="0 0 46 46" fill="none" stroke="#2F6F6A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M23 40S6 29 6 17a9 9 0 0117-4 9 9 0 0117 4c0 12-17 23-17 23z" fill="#E8765A" fill-opacity=".15"/>
+  </svg>
+
+  <div class="wrap">
+    <span class="eyebrow">hi, I&rsquo;m</span>
+    <h1>Vaishali&nbsp;Vignesh
+      <svg class="squiggle" viewBox="0 0 320 14" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M3 9 C 50 2, 90 13, 140 7 S 240 1, 317 8"/>
+      </svg>
+    </h1>
+    <p class="lede">I like the whole arc of making something real &mdash; talking to the people doing the work, finding the actual problem, and building the thing that helps. Lately that means shipping my own products with AI, and learning by doing.</p>
+
+    <div class="chips">
+      <span class="chip">Product &middot; B2B &amp; B2C</span>
+      <span class="chip">USA</span>
+      <span class="chip">Authorized to work &middot; open to relocation</span>
+      <span class="chip">Psychology</span>
+      <span class="chip">Business</span>
+    </div>
+
+    <div class="cta">
+      <a class="btn primary" href="mailto:vigneshvaishali1@gmail.com">Email &rarr;</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/vaishali-vignesh/" target="_blank" rel="noopener">LinkedIn &rarr;</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">things I&rsquo;ve made</p>
+    <h2>Things I built</h2>
+    <div class="builds">
+      <article class="build reveal">
+        <div class="bhead">
+          <h3>Incentives platform for agent networks</h3>
+          <span class="tag prog">in progress</span>
+        </div>
+        <p>A B2B software product that helps agent networks receive their incentives correctly and on time &mdash; scoping it, building it, and shipping with AI-assisted workflows.</p>
+        <a class="playlink" href="https://www.incenthub.com/" target="_blank" rel="noopener">View website &rarr;</a>
+      </article>
+
+      <article class="build reveal">
+        <div class="bhead">
+          <h3>A private dating app</h3>
+          <span class="tag live">live on Google Play</span>
+        </div>
+        <p>Designed, built, and launched it end-to-end on the Google Play Store.</p>
+        <a class="playlink" href="https://play.google.com/store/apps/details?id=com.otherside.mind&hl=en_IN" target="_blank" rel="noopener">View on Google Play &rarr;</a>
+      </article>
+
+      <article class="build reveal">
+        <div class="bhead">
+          <h3>AI for a special-needs school</h3>
+          <span class="tag taught">built &amp; taught</span>
+        </div>
+        <p>Turned a messy, month-by-month student-progress spreadsheet into clean per-child records using Power Query and Claude &mdash; then ran a hands-on workshop teaching mothers of the kids to do it themselves, covering prompt structure, tokens, and the basics of using Claude.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">where I&rsquo;ve worked</p>
+    <h2>Work experience</h2>
+    <div class="work">
+      <div class="item reveal">
+        <span class="role">Product Manager</span>
+        <span class="when">2024 &rarr; 25</span>
+        <span class="org">Refex Industries</span>
+        <p class="desc">A 0&rarr;1 B2B electric-vehicle platform for corporates. Turned <span class="m">100+ customer interviews</span> into a roadmap &mdash; <span class="m">+50% activation, 2&times; drivers</span>, and a sales cycle cut in half by making the product make sense to non-technical teams.</p>
+      </div>
+      <div class="item reveal">
+        <span class="role">Consultant</span>
+        <span class="when">2023 &rarr; 24</span>
+        <span class="org">Oliver Wyman</span>
+        <p class="desc">Found structure in messy problems across <span class="m">30+ initiatives</span> in e-commerce, insurance, and health. Scoped a <span class="m">$60M healthcare opportunity</span> into requirements and a roadmap, and got the MVP approved.</p>
+      </div>
+      <div class="item reveal">
+        <span class="role">Marketing, Live Project</span>
+        <span class="when">2022</span>
+        <span class="org">Aranyaarth Foundation</span>
+        <p class="desc">An NGO running sustainability courses. Built their acquisition initiatives and cut website bounce rate <span class="m">30%</span>. This is where my pull toward impact work started &mdash; and it stuck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="tight">
+  <div class="wrap">
+    <p class="kicker">where I studied</p>
+    <h2>Education</h2>
+    <div class="edu">
+      <div class="ecard reveal">
+        <span class="eemoji">&#128188;</span>
+        <span class="edeg">MBA</span>
+        <span class="esch">Indian Institute of Management, Ahmedabad</span>
+        <span class="ewhen">2021&ndash;23</span>
+      </div>
+      <div class="ecard reveal">
+        <span class="eemoji">&#129504;</span>
+        <span class="edeg">B.Sc. Psychology</span>
+        <span class="esch">Ethiraj College for Women, Madras University</span>
+        <span class="ewhen">2017&ndash;20</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sticky reveal">
+      <span class="lbl">currently &mdash;</span>
+      <p>An early-career product person who wants to build things that create real impact for the people who need it most. I have a deep love for building, for learning, and for passing on what I pick up along the way.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">say hi, the fun way</p>
+    <h2>Leave your mark</h2>
+    <p class="markintro">If you visited my site, let me know &mdash; pick a shape and a colour, then leave one little symbol of your own. Watch it float.</p>
+    <div class="markbox reveal">
+      <div class="controls">
+        <span class="ctl-label">pick a shape</span>
+        <div class="shapes" id="shapePicker"></div>
+        <span class="ctl-label">pick a colour</span>
+        <div class="swatches" id="colorPicker"></div>
+        <button class="btn primary leavebtn" id="leaveBtn" type="button">Leave it here &rarr;</button>
+      </div>
+      <div class="canvas" id="canvas" aria-label="A canvas of visitor symbols">
+        <span class="canvas-hint" id="canvasHint">your symbol will float here</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks">
+      <a href="mailto:vigneshvaishali1@gmail.com">vigneshvaishali1@gmail.com</a>
+      <a href="https://www.linkedin.com/in/vaishali-vignesh/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="tel:+19795536855">(979) 553-6855</a>
+    </div>
+    <p class="fnote">Made by hand, with a little AI. &middot; 2026</p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay=(i%3*60)+'ms'; io.observe(el); });
+
+  /* ---------- leave-your-mark canvas ---------- */
+  (function(){
+    const SHAPES = {
+      heart: '<path d="M12 21S3 14 3 8.5A4.5 4.5 0 0112 5a4.5 4.5 0 019 3.5C21 14 12 21 12 21z"/>',
+      star:  '<path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17l-6.2 3.6 1.6-6.7L2.2 9l6.9-.6z"/>',
+      sun:   '<g><circle cx="12" cy="12" r="4.6"/><g stroke-width="2.2" stroke-linecap="round"><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.4 4.4l2.1 2.1M17.5 17.5l2.1 2.1M19.6 4.4l-2.1 2.1M6.5 17.5l-2.1 2.1"/></g></g>',
+      spark: '<path d="M12 2c1 5 4 8 9 9-5 1-8 4-9 9-1-5-4-8-9-9 5-1 8-4 9-9z"/>'
+    };
+    const COLORS = ['#E8765A','#2F6F6A','#F0B43C','#8E7CC3','#6FA678','#23332F'];
+    let curShape = 'heart', curColor = '#E8765A';
+
+    const svg = (type,color)=>`<svg viewBox="0 0 24 24" width="30" height="30" fill="${color}" stroke="${color}">${SHAPES[type]}</svg>`;
+
+    // build shape buttons
+    const sp = document.getElementById('shapePicker');
+    Object.keys(SHAPES).forEach((type,i)=>{
+      const b=document.createElement('button');
+      b.type='button'; b.className='shape-btn'+(i===0?' sel':''); b.dataset.shape=type;
+      b.innerHTML=`<svg viewBox="0 0 24 24" fill="#54635E" stroke="#54635E">${SHAPES[type]}</svg>`;
+      b.onclick=()=>{ curShape=type; sp.querySelectorAll('.shape-btn').forEach(x=>x.classList.remove('sel')); b.classList.add('sel'); };
+      sp.appendChild(b);
+    });
+    // build swatches
+    const cp = document.getElementById('colorPicker');
+    COLORS.forEach((c,i)=>{
+      const s=document.createElement('button');
+      s.type='button'; s.className='swatch'+(i===0?' sel':''); s.style.background=c; s.dataset.color=c; s.setAttribute('aria-label','colour '+c);
+      s.onclick=()=>{ curColor=c; cp.querySelectorAll('.swatch').forEach(x=>x.classList.remove('sel')); s.classList.add('sel'); };
+      cp.appendChild(s);
+    });
+
+    const canvas = document.getElementById('canvas');
+    const hint = document.getElementById('canvasHint');
+    const btn = document.getElementById('leaveBtn');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const rnd=(a,b)=>a+Math.random()*(b-a);
+    const KEY='vv_mark_v3'; // bumped key clears any earlier saved shapes
+
+    function place(type,color,pop){
+      if(hint) hint.style.display='none';
+      const wrap=document.createElement('div');
+      wrap.className='floatshape'+(pop&&!reduce?' pop':'');
+      const size=rnd(30,46);
+      wrap.style.left=rnd(8,84)+'%';
+      wrap.style.top=rnd(10,72)+'%';
+      wrap.style.opacity=rnd(.6,.9).toFixed(2);
+      if(!reduce){
+        wrap.style.animationDuration=rnd(10,18).toFixed(1)+'s';
+        wrap.style.animationDelay=(-rnd(0,8)).toFixed(1)+'s';
+      } else { wrap.style.animation='none'; }
+      wrap.innerHTML=`<svg viewBox="0 0 24 24" width="${size}" height="${size}" fill="${color}" stroke="${color}">${SHAPES[type]}</svg>`;
+      canvas.appendChild(wrap);
+    }
+
+    function lock(){
+      btn.disabled=true;
+      btn.textContent='Thanks for your mark \u2713';
+    }
+
+    // one symbol per visitor: if they've already left one, show it and lock
+    let mine=null;
+    try{ mine=JSON.parse(localStorage.getItem(KEY)||'null'); }catch(e){ mine=null; }
+    if(mine && mine.type && SHAPES[mine.type]){ place(mine.type, mine.color, false); lock(); }
+
+    btn.onclick=()=>{
+      if(btn.disabled) return;
+      place(curShape,curColor,true);
+      try{ localStorage.setItem(KEY, JSON.stringify({type:curShape,color:curColor})); }catch(e){}
+      lock();
+    };
+  })();
+</script>
+</body>
+</html>
